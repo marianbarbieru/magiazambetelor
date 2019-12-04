@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding-bottom: 8vh;
+}
+h1 {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  word-spacing: 2px;
+}
+.pictures {
+  display: flex;
+  margin: 0 5%;
+  width: 90vw;
+  height: 40vh;
+
+  justify-content: space-between;
+  .pictures-item {
+    display: flex;
+  }
+}
+.text {
+  margin: 2rem 5%;
+  font-size: 0.8rem;
+  position: relative;
+  p {
+    text-justify: auto;
+  }
+}
+.btn {
+  padding: 1rem 0.8rem;
+  border-radius: 0.6rem;
+  background-color: #d05381;
+  border: none;
+  position: absolute;
+  top: 110%;
+  right: 10%;
+  color: inherit;
+  text-decoration: none;
+}
+.btn:hover {
+  color: #383838;
+}
+@media screen and(max-width: 1250px) {
+  h1 {
+    margin: 1rem auto;
+  }
+  .text {
+    margin: 1rem 5%;
+  }
+  #cat {
+    transition: 0.5s ease-out;
+    display: none;
+  }
+}
+@media screen and(max-width: 960px) {
+  .text {
+    margin: 1rem 5%;
+    font-size: 0.8rem;
+  }
+  #stef,
+  #clown {
+    transition: 0.5s ease-out;
+    display: none;
+  }
+}
+@media screen and(max-width: 690px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #snow {
+    transition: 0.5s ease-out;
+    display: none;
+  }
+  .btn {
+    padding: 0.5rem 0.3rem;
+  }
+}
+@media screen and(max-width:530px) {
+  .pictures {
+    justify-content: center;
+  }
+  #mickey {
+    transition: 0.5s ease-out;
+    display: none;
+  }
+  .text {
+    font-size: 0.7rem;
+  }
+}
+@media screen and(max-width: 375px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  .text {
+    font-size: 0.65rem;
+  }
+  .btn {
+    padding: 0.3rem 0.2rem;
+  }
+}

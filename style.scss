@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  // margin-bottom: 8vh;
+  font-family: Poppins, sans-serif;
+  color: white;
+  background-color: #ae5d5d; /* fallback for old browsers */
+  background-image: -webkit-linear-gradient(
+    to bottom,
+    #ae5d5d,
+    #609ea5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background-image: linear-gradient(
+    to bottom,
+    #ae5d5d,
+    #609ea5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: no-repeat;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 237, 252, 0.6);
+  height: 12vh;
+  padding: 0 5vw;
+  .logo {
+    height: 100%;
+  }
+  .brand-logo {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    text-decoration: none;
+    color: inherit;
+  }
+  .brand-logo-name {
+    font-size: 1.6em;
+    margin-left: 0.5em;
+    font-weight: 500;
+  }
+  .main-nav {
+    ul {
+      display: flex;
+      list-style: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      padding: 0.5em;
+      font-size: 0.9em;
+      height: 100%;
+    }
+    a:hover {
+      color: #535353;
+    }
+  }
+  .burger,
+  #alba {
+    display: none;
+  }
+  .burger div {
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+
+    background-color: white;
+  }
+}
+h1 {
+  display: flex;
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  word-spacing: 2px;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin: 2rem auto;
+}
+
+.main-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 237, 252, 0.8);
+  height: 9vh;
+  padding: 0 5vw;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  .logo {
+    height: 100%;
+  }
+
+  li a {
+    display: flex;
+    color: inherit;
+    text-decoration: none;
+    padding: 0 2rem;
+    font-size: 0.9em;
+    height: 100%;
+    justify-content: space-between;
+  }
+  a:hover {
+    color: black;
+  }
+  img {
+    width: 1.8em;
+    margin-right: 0.25rem;
+  }
+}
+.clear {
+  height: 8vh;
+}
+@media screen and(max-width: 930px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .main-header {
+    .brand-logo-name {
+      font-size: 1.2em;
+    }
+    .burger {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  .main-nav {
+    z-index: 1;
+    position: absolute;
+    right: 0px;
+    height: 88vh;
+    top: 12vh;
+    background-color: rgba(0, 237, 252, 1);
+    // align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    li a {
+      margin: 1em 0;
+      padding: 1em 0;
+      opacity: 0;
+    }
+    #alba {
+      margin-top: 2rem;
+      padding: 2rem, 0;
+      display: block;
+    }
+  }
+}
+@media screen and(max-width: 468px) {
+  .main-header {
+    .brand-logo-name {
+      font-size: 1rem;
+    }
+    .main-footer {
+      li {
+        justify-content: center;
+      }
+      a {
+        font-size: 0.7rem;
+        justify-content: center;
+      }
+      .logo {
+        width: 50%;
+        height: 50%;
+        padding: 0;
+      }
+    }
+  }
+  .main-footer {
+    li a {
+      padding: 0.4rem;
+      font-size: 0.65em;
+      align-self: center;
+    }
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes mainNavFade {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.toggle .line-1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line-2 {
+  opacity: 0;
+}
+.toggle .line-3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}

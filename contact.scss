@@ -1,0 +1,148 @@
+main {
+  margin: 0 5%;
+}
+
+.contain {
+  margin: 2rem auto;
+  max-width: 1170px;
+  padding: 1rem;
+  span {
+    color: rgba(0, 237, 252, 1);
+    margin-right: 1rem;
+  }
+  ul {
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+  }
+  li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+  }
+
+  li a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding: 0;
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  li a:hover {
+    color: #535353;
+  }
+
+  .wrapper {
+    box-shadow: 0 0 30px 0 rgba(72, 94, 116, 0.3);
+    border-radius: 2rem;
+  }
+
+  .company-info {
+    border-radius: 2rem;
+    background-color: rgba(0, 237, 252, 0.5);
+    padding: 1rem;
+    h3 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.contact {
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: rgba(243, 241, 230, 0.3);
+  h3 {
+    text-align: center;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem;
+    .label {
+      display: block;
+    }
+    p {
+      margin: 0;
+    }
+    .full {
+      grid-column: 1/3;
+    }
+    button,
+    input,
+    textarea {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(0, 237, 252, 0.8);
+    }
+    button {
+      background-color: rgba(173, 94, 94, 1);
+      border: 0;
+      text-transform: uppercase;
+      color: inherit;
+      letter-spacing: 0.08rem;
+      font-weight: bold;
+    }
+    button:hover,
+    button:focus {
+      background-color: rgb(182, 76, 76);
+      color: black;
+      outline: 0;
+      transition: background-color 0.5s ease-out;
+    }
+  }
+  #read,
+  #read-p {
+    display: inline-block;
+    font-size: 0.7rem;
+    text-align: center;
+    outline: 0;
+  }
+  #read {
+    width: 10%;
+    border: none;
+  }
+}
+.note {
+  h3 {
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+  }
+  p {
+    text-align: justify;
+    font-size: 0.8rem;
+  }
+  #last {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and(max-width:430px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .wrapper ul {
+    font-size: 0.7rem;
+    vertical-align: center;
+  }
+  .note {
+    h3 {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    p {
+      text-align: justify;
+      font-size: 0.7rem;
+    }
+  }
+}
+@media screen and(min-width:1030px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+}
