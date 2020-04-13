@@ -1,19 +1,20 @@
 <?php
 if(isset($_POST['submit'])){
-  $firstName=$_POST['firstName'];
-  $lastName=$_POST['lastName'];
-  $mailFrom=$_POST['email'];
-  $phone=$_POST['phone'];
-  $message=$_POST['message'];
+  $firstName=htmlspecialchars($_POST['firstName']);
+  $lastName=htmlspecialchars($_POST['lastName']);
+  $mailFrom=htmlspecialchars($_POST['email']);
+  $phone=htmlspecialchars($_POST['phone']);
+  $message=htmlspecialchars($_POST['message']);
 }
 
 $mailTo="marianbarbieru@gmail.com";
-$headers="From: ".$mailFrom;
-$txt= "Ai primit un e-mail de la ".$firstName.".\n\n".$phone.".\n\n".$message;
+$subject="Solicitare de contact de la ".$firstName." ".$lastName;
+$body= "Ai primit un e-mail de la ".$firstName." ".$lastName."\n\n".$phone."\n\n".$message;
+
 
 
 mail($mailTo, $phone, $txt, $headers );
-header("Location:index.php?mailsend");
+header("Location:multumim.html?mailsend");
 
 
 ?>
